@@ -1,0 +1,10 @@
+dig_filter\system_stm32f4xx.o: ../Src/system_stm32f4xx.c
+dig_filter\system_stm32f4xx.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+dig_filter\system_stm32f4xx.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
+dig_filter\system_stm32f4xx.o: ../Drivers/CMSIS/Include/core_cm4.h
+dig_filter\system_stm32f4xx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+dig_filter\system_stm32f4xx.o: ../Drivers/CMSIS/Include/core_cmInstr.h
+dig_filter\system_stm32f4xx.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+dig_filter\system_stm32f4xx.o: ../Drivers/CMSIS/Include/core_cmFunc.h
+dig_filter\system_stm32f4xx.o: ../Drivers/CMSIS/Include/core_cmSimd.h
+dig_filter\system_stm32f4xx.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h

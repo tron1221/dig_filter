@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp
+"dig_filter\startup_stm32f407xx.o"
+"dig_filter\main.o"
+"dig_filter\gpio.o"
+"dig_filter\adc.o"
+"dig_filter\dac.o"
+"dig_filter\dma.o"
+"dig_filter\tim.o"
+"dig_filter\usart.o"
+"dig_filter\stm32f4xx_it.o"
+"dig_filter\stm32f4xx_ll_gpio.o"
+"dig_filter\stm32f4xx_ll_adc.o"
+"dig_filter\stm32f4xx_ll_dma.o"
+"dig_filter\stm32f4xx_ll_dac.o"
+"dig_filter\stm32f4xx_ll_tim.o"
+"dig_filter\stm32f4xx_ll_usart.o"
+"dig_filter\stm32f4xx_ll_rcc.o"
+"dig_filter\stm32f4xx_ll_utils.o"
+"dig_filter\stm32f4xx_ll_exti.o"
+"dig_filter\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "dig_filter\dig_filter.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "dig_filter.map" -o dig_filter\dig_filter.axf
