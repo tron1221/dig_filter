@@ -98,20 +98,20 @@ extern "C" {
 	#define BLUE_LED GPIO_ODR_OD15_Msk
 	
 	///Включение светодиода 
-	///\param LED Маска-указание на нужный светодиод
+	///@param LED Маска-указание на нужный светодиод
 	#define LED_ON(LED) LL_GPIO_SetOutputPin(GPIOD,LED)
 	///Выключение светодиода
-	///\param LED Маска-указание на нужный светодиод
+	///@param LED Маска-указание на нужный светодиод
 	#define LED_OFF(LED) LL_GPIO_ResetOutputPin(GPIOD,LED)
 	///Переключение светодиода
-	///\param LED Маска-указание на нужный светодиод
+	///@param LED Маска-указание на нужный светодиод
 	#define LED_TOGGLE(LED) LL_GPIO_TogglePin(GPIOD,LED)
 	
-	///Частота измерений ADC
+	///Частота измерений ADC (Гц)
 	#define ADC_MEAS_FREQ 10000
-	///Частота выдачи данных на DAC
+	///Частота выдачи данных на DAC (Гц)
 	#define DAC_SAMPLE_FREQ 100
-	///Частота отправки сообщений по USART
+	///Частота отправки сообщений по USART (Гц)
 	#define USART_TRANS_FREQ 1
 	
 	///Количество данных в сообщении USART

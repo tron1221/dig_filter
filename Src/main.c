@@ -85,7 +85,7 @@
 	
 	uint16_t *p_adc_buf=adc_buf0;///<Указатель на массив данных от ADC нуждающийся в обработке
 	
-	volatile uint32_t dac_cur_buf_count=0;///<Счетчик текущего положения заполнения массива
+	volatile uint32_t dac_cur_buf_count=0;///<Счетчик текущего положения заполнения массива данных для DAC
 	uint16_t *p_dac_cur_buf=dac_buf0;///<Указатель на текущий заполняемый массив данных для DAC
 	uint16_t *p_dac_buf=dac_buf1;///<Указатель на массив данных для DAC нуждающийся в обработке
 	
@@ -94,7 +94,7 @@
 	{
 	DAC_BUF0, ///<Указывает, что заполняется буфер данных 0
 	DAC_BUF1 ///<Указывает, что заполняется буфер данных 1
-	} dac_cur_buf=DAC_BUF0;
+	} dac_cur_buf=DAC_BUF0;///<Определяет текущий заполняемый буфер данных для DAC
 
 /* USER CODE END PV */
 
@@ -107,7 +107,10 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-///Запускает отправку массива данных по USART
+/**
+@brief Запускает отправку массива данных по USART
+@retval None
+*/
 void  usart_data_transmite(void)
 {
 	LED_ON(RED_LED);
@@ -122,11 +125,12 @@ void  usart_data_transmite(void)
 	LL_USART_EnableDirectionTx(USART3);
 }
 
+
 /**
-Расчитывает среднее значение элементов массива
-\param ar Массив данных для расчета среднего значения
-\param ar_num Количество элементов массива
-\return Среднее значение элементов массива
+@brief Расчитывает среднее значение элементов массива
+@param ar Массив данных для расчета среднего значения
+@param ar_num Количество элементов массива
+@retval uint16_t Среднее значение элементов массива. Если количество элементов массива меньше единицы, вернет первый элемент массива
 */
 uint16_t calc_ar_average(uint16_t ar[],uint16_t ar_num)
 {
@@ -136,7 +140,10 @@ uint16_t calc_ar_average(uint16_t ar[],uint16_t ar_num)
 	return sum/ar_num;
 }
 
-///Обрабатывает массив данных, полученных от ADC
+/**
+@brief Обрабатывает массив данных, полученных от ADC
+@retval None
+*/
 void ADC_data_proc(void)
 {
 	dac_out=*(p_dac_cur_buf+dac_cur_buf_count++)=calc_ar_average(p_adc_buf,ADC_DATA_AMOUNT);
@@ -164,7 +171,10 @@ void ADC_data_proc(void)
 	p_ADC_func_proc=NOP;
 }
 
-///Обрабатывает массив данных отправленных на DAC
+/**
+@brief Обрабатывает массив данных отправленных на DAC
+@retval None
+*/
 void DAC_data_proc(void)
 {
 	uint32_t usart_num=calc_ar_average(p_dac_buf,DAC_DATA_AMOUNT); 
@@ -181,10 +191,16 @@ void DAC_data_proc(void)
 	
 	p_DAC_func_proc=NOP;
 }
+/**
+@brief Функция-заглушка, не выполняет никаких действий
+@retval None
+*/
+void NOP(void){}
 
-void NOP(void){}///Функция-заглушка, не выполняет никаких действий
-
-///Запускает преобразование DAC
+/**
+@brief Запускает преобразование DAC
+@retval None
+*/
 static inline void DAC_start(void)
 {
 	//настраиваем DAC
@@ -192,7 +208,10 @@ static inline void DAC_start(void)
 	LL_DAC_Enable(DAC,LL_DAC_CHANNEL_1);	
 }
 
-///Подготавливает USART для передачи данных
+/**
+@brief Подготавливает USART для передачи данных
+@retval None
+*/
 static inline void USART_prep(void)
 {
 	//настройка DMA1, USART3 для передачи по USART	
@@ -200,8 +219,10 @@ static inline void USART_prep(void)
 	LL_DMA_SetPeriphAddress(DMA1,LL_DMA_STREAM_3,(uint32_t)&(USART3->DR));
 	LL_DMA_SetMemoryAddress(DMA1,LL_DMA_STREAM_3,(uint32_t)usart_data);	
 }
-
-///Запускает преобразование ADC
+/**
+@brief Запускает преобразование ADC
+@retval None
+*/
 static inline void ADC_start(void)
 {
 	//настраиваем ADC

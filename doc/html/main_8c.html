@@ -1,0 +1,445 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>digital filter: Файл Src/main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">digital filter
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл main.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>: Main program body  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
+<code>#include &quot;adc.h&quot;</code><br />
+<code>#include &quot;dac.h&quot;</code><br />
+<code>#include &quot;dma.h&quot;</code><br />
+<code>#include &quot;tim.h&quot;</code><br />
+<code>#include &quot;usart.h&quot;</code><br />
+<code>#include &quot;gpio.h&quot;</code><br />
+<code>#include &quot;stdio.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a102faa853e254b8ee8105bf794160312"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a102faa853e254b8ee8105bf794160312">dac_cur_buf_Type</a> { <a class="el" href="main_8c.html#a102faa853e254b8ee8105bf794160312a805a2a1d58db49897087822f1f179d90">DAC_BUF0</a>, 
+<a class="el" href="main_8c.html#a102faa853e254b8ee8105bf794160312ab5d9ee333418a773a2992f39fe7dff5e">DAC_BUF1</a>
+ }</td></tr>
+<tr class="memdesc:a102faa853e254b8ee8105bf794160312"><td class="mdescLeft">&#160;</td><td class="mdescRight">Набор возможных значений, отражающих текущий заполняемый массив  <a href="main_8c.html#a102faa853e254b8ee8105bf794160312">Подробнее...</a><br /></td></tr>
+<tr class="separator:a102faa853e254b8ee8105bf794160312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a70af21c671abfcc773614a9a4f63d920"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a70af21c671abfcc773614a9a4f63d920">SystemClock_Config</a> (void)</td></tr>
+<tr class="memdesc:a70af21c671abfcc773614a9a4f63d920"><td class="mdescLeft">&#160;</td><td class="mdescRight">System Clock Configuration.  <a href="#a70af21c671abfcc773614a9a4f63d920">Подробнее...</a><br /></td></tr>
+<tr class="separator:a70af21c671abfcc773614a9a4f63d920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7dc69c2a42000e5dae3a7c6effa16e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac7dc69c2a42000e5dae3a7c6effa16e7">usart_data_transmite</a> (void)</td></tr>
+<tr class="memdesc:ac7dc69c2a42000e5dae3a7c6effa16e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запускает отправку массива данных по USART.  <a href="#ac7dc69c2a42000e5dae3a7c6effa16e7">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac7dc69c2a42000e5dae3a7c6effa16e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa43158e26ca65b72eaca9fa47b81bc05"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aa43158e26ca65b72eaca9fa47b81bc05">calc_ar_average</a> (uint16_t ar[], uint16_t ar_num)</td></tr>
+<tr class="memdesc:aa43158e26ca65b72eaca9fa47b81bc05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расчитывает среднее значение элементов массива  <a href="#aa43158e26ca65b72eaca9fa47b81bc05">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa43158e26ca65b72eaca9fa47b81bc05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dae82c30ce712f7f6a86f96172f5525"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a3dae82c30ce712f7f6a86f96172f5525">ADC_data_proc</a> (void)</td></tr>
+<tr class="memdesc:a3dae82c30ce712f7f6a86f96172f5525"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает массив данных, полученных от ADC.  <a href="#a3dae82c30ce712f7f6a86f96172f5525">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3dae82c30ce712f7f6a86f96172f5525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0206968848b6a16fbba91e65887a2bdd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0206968848b6a16fbba91e65887a2bdd">DAC_data_proc</a> (void)</td></tr>
+<tr class="memdesc:a0206968848b6a16fbba91e65887a2bdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обрабатывает массив данных отправленных на DAC.  <a href="#a0206968848b6a16fbba91e65887a2bdd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0206968848b6a16fbba91e65887a2bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d9f3446653e398af0583979cee23c70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a9d9f3446653e398af0583979cee23c70">NOP</a> (void)</td></tr>
+<tr class="memdesc:a9d9f3446653e398af0583979cee23c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция-заглушка, не выполняет никаких действий  <a href="#a9d9f3446653e398af0583979cee23c70">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9d9f3446653e398af0583979cee23c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
+<tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The application entry point.  <a href="#a840291bc02cba5474a4cb46a9b9566fe">Подробнее...</a><br /></td></tr>
+<tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1730ffe1e560465665eb47d9264826f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a1730ffe1e560465665eb47d9264826f9">Error_Handler</a> (void)</td></tr>
+<tr class="memdesc:a1730ffe1e560465665eb47d9264826f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is executed in case of error occurrence.  <a href="#a1730ffe1e560465665eb47d9264826f9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1730ffe1e560465665eb47d9264826f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:ab100a02fc43ab65dc29042a5343aaf95"><td class="memItemLeft" align="right" valign="top"><a id="ab100a02fc43ab65dc29042a5343aaf95"></a>
+volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab100a02fc43ab65dc29042a5343aaf95">dac_out</a> =0</td></tr>
+<tr class="memdesc:ab100a02fc43ab65dc29042a5343aaf95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Последнее выданное на DAC значение <br /></td></tr>
+<tr class="separator:ab100a02fc43ab65dc29042a5343aaf95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a826f50a9e4619e97823c3ff5ca5c2e18"><td class="memItemLeft" align="right" valign="top"><a id="a826f50a9e4619e97823c3ff5ca5c2e18"></a>
+volatile char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a826f50a9e4619e97823c3ff5ca5c2e18">usart_data</a> [<a class="el" href="main_8h.html#ab5505cc0e11b388af0de4b2bce2f8aee">USART_DATA_AMOUNT</a>] ={'0','1','2','3',' ','m','V','\r'}</td></tr>
+<tr class="memdesc:a826f50a9e4619e97823c3ff5ca5c2e18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Массив данных для отправки по USART. <br /></td></tr>
+<tr class="separator:a826f50a9e4619e97823c3ff5ca5c2e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afef82c7fdbc1d865134c7035daaf78a2"><td class="memItemLeft" align="right" valign="top"><a id="afef82c7fdbc1d865134c7035daaf78a2"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#afef82c7fdbc1d865134c7035daaf78a2">adc_buf0</a> [<a class="el" href="main_8h.html#a97024c25add3d77f3249691dfe7443e3">ADC_DATA_AMOUNT</a>]</td></tr>
+<tr class="memdesc:afef82c7fdbc1d865134c7035daaf78a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Буфер 0 полученных данных от ADC. <br /></td></tr>
+<tr class="separator:afef82c7fdbc1d865134c7035daaf78a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a13c886b5055113999b51792ab4e197"><td class="memItemLeft" align="right" valign="top"><a id="a9a13c886b5055113999b51792ab4e197"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a9a13c886b5055113999b51792ab4e197">adc_buf1</a> [<a class="el" href="main_8h.html#a97024c25add3d77f3249691dfe7443e3">ADC_DATA_AMOUNT</a>]</td></tr>
+<tr class="memdesc:a9a13c886b5055113999b51792ab4e197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Буфер 1 полученных данных от ADC. <br /></td></tr>
+<tr class="separator:a9a13c886b5055113999b51792ab4e197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfce4289cfbe44db9f0d141706739c2f"><td class="memItemLeft" align="right" valign="top"><a id="abfce4289cfbe44db9f0d141706739c2f"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#abfce4289cfbe44db9f0d141706739c2f">dac_buf0</a> [<a class="el" href="main_8h.html#a888913cee94b527e9072b7e5298c08d7">DAC_DATA_AMOUNT</a>]</td></tr>
+<tr class="memdesc:abfce4289cfbe44db9f0d141706739c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Буфер 0 данных отправленных на DAC. <br /></td></tr>
+<tr class="separator:abfce4289cfbe44db9f0d141706739c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e9608891c450de01d5bd4a3cec47de9"><td class="memItemLeft" align="right" valign="top"><a id="a8e9608891c450de01d5bd4a3cec47de9"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a8e9608891c450de01d5bd4a3cec47de9">dac_buf1</a> [<a class="el" href="main_8h.html#a888913cee94b527e9072b7e5298c08d7">DAC_DATA_AMOUNT</a>]</td></tr>
+<tr class="memdesc:a8e9608891c450de01d5bd4a3cec47de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Буфер 1 данных отправленных на DAC. <br /></td></tr>
+<tr class="separator:a8e9608891c450de01d5bd4a3cec47de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab84351b89dc34b589b6977d76670d7"><td class="memItemLeft" align="right" valign="top"><a id="aaab84351b89dc34b589b6977d76670d7"></a>
+void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aaab84351b89dc34b589b6977d76670d7">p_ADC_func_proc</a> )(void) =<a class="el" href="main_8h.html#a9d9f3446653e398af0583979cee23c70">NOP</a></td></tr>
+<tr class="memdesc:aaab84351b89dc34b589b6977d76670d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель на текущую функцию-обработчик массива данных от ADC. <br /></td></tr>
+<tr class="separator:aaab84351b89dc34b589b6977d76670d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab8ff39c07065536d2cd6979a054d0bc"><td class="memItemLeft" align="right" valign="top"><a id="aab8ff39c07065536d2cd6979a054d0bc"></a>
+void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aab8ff39c07065536d2cd6979a054d0bc">p_DAC_func_proc</a> )(void) =<a class="el" href="main_8h.html#a9d9f3446653e398af0583979cee23c70">NOP</a></td></tr>
+<tr class="memdesc:aab8ff39c07065536d2cd6979a054d0bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель на текущую функцию-обработчик массива данных для DAC. <br /></td></tr>
+<tr class="separator:aab8ff39c07065536d2cd6979a054d0bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672d16a7d21f5bd1739774c74920c2c1"><td class="memItemLeft" align="right" valign="top"><a id="a672d16a7d21f5bd1739774c74920c2c1"></a>
+uint16_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a672d16a7d21f5bd1739774c74920c2c1">p_adc_buf</a> =<a class="el" href="main_8h.html#a740da4a4ccad0e23f2a8e9e82d3e0774">adc_buf0</a></td></tr>
+<tr class="memdesc:a672d16a7d21f5bd1739774c74920c2c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель на массив данных от ADC нуждающийся в обработке <br /></td></tr>
+<tr class="separator:a672d16a7d21f5bd1739774c74920c2c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae91c61032e767ce5e3074a84dc62e64b"><td class="memItemLeft" align="right" valign="top"><a id="ae91c61032e767ce5e3074a84dc62e64b"></a>
+volatile uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae91c61032e767ce5e3074a84dc62e64b">dac_cur_buf_count</a> =0</td></tr>
+<tr class="memdesc:ae91c61032e767ce5e3074a84dc62e64b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Счетчик текущего положения заполнения массива данных для DAC. <br /></td></tr>
+<tr class="separator:ae91c61032e767ce5e3074a84dc62e64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa91e42c732e0a2fbe3ee76e8e8e2a2"><td class="memItemLeft" align="right" valign="top"><a id="aefa91e42c732e0a2fbe3ee76e8e8e2a2"></a>
+uint16_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aefa91e42c732e0a2fbe3ee76e8e8e2a2">p_dac_cur_buf</a> =<a class="el" href="main_8c.html#abfce4289cfbe44db9f0d141706739c2f">dac_buf0</a></td></tr>
+<tr class="memdesc:aefa91e42c732e0a2fbe3ee76e8e8e2a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель на текущий заполняемый массив данных для DAC. <br /></td></tr>
+<tr class="separator:aefa91e42c732e0a2fbe3ee76e8e8e2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcf77c41ac3618f076a5c8d8231d82ec"><td class="memItemLeft" align="right" valign="top"><a id="adcf77c41ac3618f076a5c8d8231d82ec"></a>
+uint16_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#adcf77c41ac3618f076a5c8d8231d82ec">p_dac_buf</a> =<a class="el" href="main_8c.html#a8e9608891c450de01d5bd4a3cec47de9">dac_buf1</a></td></tr>
+<tr class="memdesc:adcf77c41ac3618f076a5c8d8231d82ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель на массив данных для DAC нуждающийся в обработке <br /></td></tr>
+<tr class="separator:adcf77c41ac3618f076a5c8d8231d82ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae6e3d1ec9bf9ec5427a681221e40bb0"><td class="memItemLeft" align="right" valign="top"><a id="aae6e3d1ec9bf9ec5427a681221e40bb0"></a>
+enum <a class="el" href="main_8c.html#a102faa853e254b8ee8105bf794160312">dac_cur_buf_Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aae6e3d1ec9bf9ec5427a681221e40bb0">dac_cur_buf</a> =<a class="el" href="main_8c.html#a102faa853e254b8ee8105bf794160312a805a2a1d58db49897087822f1f179d90">DAC_BUF0</a></td></tr>
+<tr class="memdesc:aae6e3d1ec9bf9ec5427a681221e40bb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Определяет текущий заполняемый буфер данных для DAC. <br /></td></tr>
+<tr class="separator:aae6e3d1ec9bf9ec5427a681221e40bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>: Main program body </p>
+<p>This notice applies to any and all portions of this file that are not between comment pairs USER CODE BEGIN and USER CODE END. Other portions of this file, whether inserted by the user or by software development tools are owned by their respective copyright owners.</p>
+<p>COPYRIGHT(c) 2019 STMicroelectronics</p>
+<p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p><ol type="1">
+<li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
+<li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
+<li>Neither the name of STMicroelectronics nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</li>
+</ol>
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. </p>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="a102faa853e254b8ee8105bf794160312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a102faa853e254b8ee8105bf794160312">&#9670;&nbsp;</a></span>dac_cur_buf_Type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="main_8c.html#a102faa853e254b8ee8105bf794160312">dac_cur_buf_Type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Набор возможных значений, отражающих текущий заполняемый массив </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a102faa853e254b8ee8105bf794160312a805a2a1d58db49897087822f1f179d90"></a>DAC_BUF0&#160;</td><td class="fielddoc"><p>Указывает, что заполняется буфер данных 0. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a102faa853e254b8ee8105bf794160312ab5d9ee333418a773a2992f39fe7dff5e"></a>DAC_BUF1&#160;</td><td class="fielddoc"><p>Указывает, что заполняется буфер данных 1. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a3dae82c30ce712f7f6a86f96172f5525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dae82c30ce712f7f6a86f96172f5525">&#9670;&nbsp;</a></span>ADC_data_proc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ADC_data_proc </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обрабатывает массив данных, полученных от ADC. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa43158e26ca65b72eaca9fa47b81bc05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa43158e26ca65b72eaca9fa47b81bc05">&#9670;&nbsp;</a></span>calc_ar_average()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t calc_ar_average </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>ar</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>ar_num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Расчитывает среднее значение элементов массива </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ar</td><td>Массив данных для расчета среднего значения </td></tr>
+    <tr><td class="paramname">ar_num</td><td>Количество элементов массива </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">uint16_t</td><td>Среднее значение элементов массива. Если количество элементов массива меньше единицы, вернет первый элемент массива </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0206968848b6a16fbba91e65887a2bdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0206968848b6a16fbba91e65887a2bdd">&#9670;&nbsp;</a></span>DAC_data_proc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAC_data_proc </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Обрабатывает массив данных отправленных на DAC. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1730ffe1e560465665eb47d9264826f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1730ffe1e560465665eb47d9264826f9">&#9670;&nbsp;</a></span>Error_Handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Error_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function is executed in case of error occurrence. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a840291bc02cba5474a4cb46a9b9566fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a840291bc02cba5474a4cb46a9b9566fe">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The application entry point. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">int</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9d9f3446653e398af0583979cee23c70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d9f3446653e398af0583979cee23c70">&#9670;&nbsp;</a></span>NOP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NOP </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Функция-заглушка, не выполняет никаких действий </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a70af21c671abfcc773614a9a4f63d920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70af21c671abfcc773614a9a4f63d920">&#9670;&nbsp;</a></span>SystemClock_Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SystemClock_Config </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>System Clock Configuration. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac7dc69c2a42000e5dae3a7c6effa16e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7dc69c2a42000e5dae3a7c6effa16e7">&#9670;&nbsp;</a></span>usart_data_transmite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void usart_data_transmite </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Запускает отправку массива данных по USART. </p>
+<dl class="retval"><dt>Возвращаемые значения</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>
